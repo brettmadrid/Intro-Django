@@ -165,7 +165,7 @@ There won’t be a change to the actual page that renders.
 
 In the `notes` folder, open `models.py`.
 
-Create a class called `notes` that inherits from `models.Model`:
+Create a class called `note` that inherits from `models.Model`:
 
 ```python
 class Note(models.Model):
