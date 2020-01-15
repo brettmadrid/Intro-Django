@@ -31,3 +31,11 @@ Fork this repo to use for your projects this week.
 - Add a Django front end to the data.
 - Brainstorm a list of 10 additional features users would find useful.
 - Implement the brainstormed list.
+
+## Install to Django
+
+1. heroku login
+2. pipenv install gunicorn - The webserver for Heroku to use instead of the defualt Django one
+3. pipenv install psycopg2-binary - PostgreSQL client binaries
+4. pipenv install dj-database-url - enables parameterizeing database to allow to use SQLite locally and Heroku to use Postgres
+5. pipenv install whitenoise - optimizes use of static files if present
