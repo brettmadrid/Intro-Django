@@ -60,3 +60,18 @@ DATABASE_URL="sqlite:///db.sqlite3"
     DATABASES['default'] = dj_database_url.config(conn_max_age=600)
     DATABASES['default'] = dj_database_url.config(default='postgres//...')
     DATABASES['default'] = dj_database_url.parse('postgres//...', conn_max_age=600)
+
+15. Create a Procfile and put in it the following:
+
+web: gunicorn <projectName>.wsgi --log-file -
+
+16. Edit settings.py and add WhiteNoise to the MIDDLEWARE_CLASSES just below SecurityMiddleware
+
+'whitenoise.middleware.WhiteNoiseMiddleware'
+
+17. add static settings to settings.py
+
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+18. In the Heroku CLI type: 'heroku create <your app>' - Creates app on Heroku
