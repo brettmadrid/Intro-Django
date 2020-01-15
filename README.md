@@ -75,3 +75,9 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 18. In the Heroku CLI type: 'heroku create <your app>' - Creates app on Heroku
+19. In the Heroku CLI type: 'heroku addons:create heroku-postgresql:hobby-dev' - makes a Heroku postgres database and sets the environment variable
+20. Set Heroku config variables:
+
+ALLOWED_HOSTS=.herokuapp.com
+DEBUG=False
+SECRET_KEY=<secret key from env file>
