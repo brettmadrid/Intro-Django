@@ -54,3 +54,9 @@ DATABASE_URL="sqlite:///db.sqlite3"
 10. add 'from decouple import config' to settings.py - allows to make reference to env file
 11. add 'import dj_database_url' to settings.py. Allows for env use of database
 12. pipenv install python-decouple
+13. Change ALLOWED_HOSTS in the settings.py to: ALLOWED_HOSTS =
+14. Add to the DATABASES section of settings.py the following:
+
+    DATABASES['default'] = dj_database_url.config(conn_max_age=600)
+    DATABASES['default'] = dj_database_url.config(default='postgres//...')
+    DATABASES['default'] = dj_database_url.parse('postgres//...', conn_max_age=600)
