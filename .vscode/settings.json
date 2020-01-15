@@ -1,0 +1,6 @@
+{
+  "python.pythonPath": "/Users/lambda_school_loaner_103/.local/share/virtualenvs/Intro-Django-405WXill/bin/python",
+  "python.linting.pylintEnabled": false,
+  "python.linting.flake8Enabled": true,
+  "python.linting.enabled": true
+}
