@@ -39,3 +39,18 @@ Fork this repo to use for your projects this week.
 3. pipenv install psycopg2-binary - PostgreSQL client binaries
 4. pipenv install dj-database-url - enables parameterizeing database to allow to use SQLite locally and Heroku to use Postgres
 5. pipenv install whitenoise - optimizes use of static files if present
+6. pipenv shell - to start the virtual environments
+7. pip3 freeze > requirements.txt - This creates a requirements.txt file which is required if using the virtualenv (pipenv shell created a virtualenv)
+8. Create an .env file if not already created with the following:
+
+ALLOWED_HOSTS=localhost,127.0.0.1
+DEBUG=True
+SECRET_KEY=<secrec key val>
+DATABASE_URL="sqlite:///db.sqlite3"
+
+\*\* Note- These values should later be copied into the config variable in Heroku settings console and DEBUG=False and the DATABASE_URL the url of postgres
+
+9. pipenv install django - if it is not already installed.
+10. add 'from decouple import config' to settings.py - allows to make reference to env file
+11. add 'import dj_database_url' to settings.py. Allows for env use of database
+12. pipenv install python-decouple
